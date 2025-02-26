@@ -61,6 +61,34 @@ void main() {
     genre: "Dystopian",
     year: "1949",
   );
+  addBook(
+    title: "1984",
+    author: "George Orwell",
+    genre: "Dystopian",
+    year: "1949",
+  );
+
+  addBook(
+    title: "الأمير",
+    author: "نيكولو ميكيافيللي",
+    genre: "سياسة",
+    year: "1532",
+  );
+
+  addBook(
+    title: "حكاية مدينة",
+    author: "تشارلز ديكنز",
+    genre: "رواية",
+    year: "1859",
+  );
+
+  addBook(
+    title: "موسم الهجرة إلى الشمال",
+    author: "الطيب صالح",
+    genre: "رواية",
+    year: "1966",
+  );
+
   String test = "Dystopian";
   listAllBooks(genre: test);
   print(getBookInfo(title: "55"));
