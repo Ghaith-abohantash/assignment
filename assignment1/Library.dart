@@ -24,8 +24,12 @@ void listAllBooks({String genre = ""}) {
     return;
   }
 
-  String displayTitle = genre.isEmpty ? "All Books:" : "Books in Genre: $genre";
-  print(displayTitle);
+String displayTitle;
+if (genre.isEmpty) {
+  displayTitle = "All Books:";
+} else {
+  displayTitle = "Books in Genre: $genre";
+}  print(displayTitle);
 
   library.forEach((title, details) {
     if (genre.isEmpty || details['genre'] == genre) {
@@ -43,7 +47,11 @@ List<String> listBooksByGenre({required String genre}) {
     }
   }
 
-  return books.isEmpty ? ["No books found for this genre."] : books;
+if (books.isEmpty) {
+  return ["No books found for this genre."];
+} else {
+  return books;
+}
 }
 
 String removeBook({required String title}) {
@@ -91,5 +99,6 @@ void main() {
 
   String test = "Dystopian";
   listAllBooks(genre: test);
-  print(getBookInfo(title: "55"));
+  print(removeBook(title: "حكاية مدينة"));
+  print(getBookInfo(title: "حكاية مدينة"));
 }
